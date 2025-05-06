@@ -17,9 +17,7 @@ use App\Http\Controllers\WaliMuridController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [SiswaController::class, 'index']);
 
 Route::resource('siswa', SiswaController::class);
 Route::resource('kelas', KelasController::class);
